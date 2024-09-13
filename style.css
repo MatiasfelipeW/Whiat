@@ -1,0 +1,642 @@
+/*boton visual para translate ya que la website esta en ingles*/
+
+
+
+
+
+/* hare  que el astronauta tenga mas efectos para que la visibilidad de la pagina sea mas interactiva un poco saturada pero con funcionalidad*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.about-section {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Contenedor de la imagen del astronauta */
+.astronaut-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+/* Imagen del astronauta con animación de vuelo */
+.astronaut {
+    width: 200px;
+    height: auto;
+    animation: fly 3s ease-in-out infinite; /* Animación de vuelo */
+}
+
+/* Animación de vuelo (moverse hacia arriba y abajo) */
+@keyframes fly {
+    0%, 100% {
+        transform: translateY(0); /* Posición original */
+    }
+    50% {
+        transform: translateY(-40px); /* Flotar hacia arriba */
+    }
+}
+
+
+/* Efecto de parpadeo del fuego */
+@keyframes flicker {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+}
+
+/* Fuego duplicado para crear la ilusión de doble propulsión */
+.fire::before,
+.fire::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,69,0,1) 60%, rgba(255,0,0,1) 100%);
+    border-radius: 50%;
+    animation: flicker 0.6s infinite alternate ease-in-out;
+}
+
+.fire::before {
+    left: -30px;
+}
+
+.fire::after {
+    right: -30px;
+}
+
+/* Estilos del texto */
+.P1 {
+    text-align: justify;
+    padding: 20px;
+}
+
+
+ /*  hare girar el planeta tierra y le dare un tono como si fuese la capa de ozono */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.services-section {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Contenedor de la imagen del planeta Tierra */
+.earth-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+/* Imagen del planeta Tierra con rotación */
+.earth {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Hace que la imagen tenga forma redonda */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); /* Capa blanca suave */
+    animation: rotate 60s linear infinite; /* Rotación lenta (60 segundos por ciclo) */
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.overlay-image {
+    opacity: 0.6;
+}
+
+/* Estilos del texto */
+.P1 {
+    text-align: justify;
+    padding: 20px;
+}
+
+
+
+/* Define la animación para cambiar el color */
+@keyframes colorChange {
+    0% {
+        color: #ff0000; /* Rojo intenso */
+    }
+    50% {
+        color: #000000; /* Negro */
+    }
+    100% {
+        color: #ff0000; /* Rojo intenso */
+    }
+}
+
+/* Aplica la animación al h2 en las secciones especificadas */
+#about h2, 
+#services h2 {
+    animation: colorChange 3s infinite; /* Dura 0.6 segundos (0.3 segundos para rojo y 0.3 segundos para negro) y se repite infinitamente */
+}
+
+/* Cambia el color y alinea el texto al centro para los párrafos con clase P1 hidden-text en la sección #services */
+#services  .P1.hidden-text {
+    color: #3f3b3b; /* Cambia el color del texto según tu preferencia */
+    text-align: unset; /* Alinea el texto al centro */
+    
+}
+#about .P1.hidden-text {
+    color: #3f3b3b;
+    text-align: unset;
+}
+
+
+
+<section class="expandable-section">
+  <h2>Heading</h2>
+  <p class="expandable-text">
+    This is the text that will expand when tapped.
+  </p>
+</section>
+
+.hidden-text-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overlay-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* Change the cursor to indicate a clickable area */
+  }
+  
+  .hidden-text {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s   
+   ease;
+    z-index: 1; /* Ensure the text is above the image */
+  }
+  
+  .hidden-text-container:hover .hidden-text,
+  .hidden-text-container:active .hidden-text {
+    opacity: 1;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    .hidden-text-container {
+      /* Increase touch target area */
+      padding: 20px;
+    }
+  }
+  
+/* Estilos generales */
+body {
+    font-family: 'Protest Guerrilla', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 15px;
+}
+
+/* Ajustes para iPhone (ancho máximo 767px) */
+@media only screen and (max-width: 767px) {
+    p {
+        font-size: 16px; /* Reduce ligeramente el tamaño de la fuente */
+        margin: 10px 10px; /* Reduce los márgenes para maximizar el espacio */
+    }
+
+    .hidden-text-container {
+        max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+        padding: 10px;
+    }
+
+    .hidden-text {
+        font-size: 14px; /* Ajusta el tamaño de texto dentro del contenedor */
+        padding: 10px;
+        line-height: 1.4;
+    }
+
+    .carousel-item img {
+        width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
+        height: auto;
+    }
+
+    .whatsapp-img-container {
+        width: 80px; /* Reduce el tamaño de la imagen de WhatsApp */
+        height: 140px;
+    }
+
+    .video-container {
+        width: 150px; /* Ajusta el tamaño del video */
+    }
+
+    footer p {
+        font-size: 14px; /* Ajusta el tamaño del texto en el footer */
+        margin: 5px 10px;
+    }
+}
+
+/* Estilos generales para todos los dispositivos */
+main p {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Estilos específicos para iPhones */
+@media only screen and (max-width: 767px) {
+    main p {
+        font-size: 20px; /* Ajusta el tamaño de letra según sea necesario */
+    }
+
+    .hidden-text-container {
+        max-width: 100%; /* Asegura que el contenedor ocupe el ancho completo en pantallas pequeñas */
+    }
+
+    .hidden-text {
+        top: 50px;
+        left: 10px;
+        padding: 10px;
+    }
+
+    .video-container {
+        width: 150px; /* Reduce el tamaño del video para pantallas más pequeñas */
+        top: 5px;
+        right: 5px;
+    }
+
+    .carousel-item img {
+        width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
+        height: auto;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* Otros estilos generales que se aplicarán a todas las pantallas */
+.hidden-text-container {
+    /* Tus estilos actuales */
+}
+
+.hidden-text {
+    /* Tus estilos actuales */
+}
+
+/* Resto de tu CSS */
+
+main p {
+    text-align: center;
+    font-size: 20px; /* Cambia 18px por el tamaño de letra que prefieras */
+}
+
+
+
+.hidden-text-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño según sea necesario */
+    overflow: hidden;
+}
+
+.overlay-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hidden-text {
+    top: 100px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color:  #6f7c6ff1; /* Fondo semi-transparente */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease;
+}
+
+.hidden-text-container:hover .hidden-text {
+    opacity: 1;
+}
+
+.hidden-text-container img {
+    display: flex;
+    transition: opacity 0.5s ease;
+}
+
+.hidden-text-container:hover img {
+    opacity: 0.2; /* La imagen se desvanecerá al pasar el cursor */
+}
+
+
+{
+    border: 4px solid rgba(47, 58, 17, 0.911); /* Borde del footer: 3px de grosor, sólido, color gris oscuro */
+}
+
+p:hover {
+
+    color: #cf0b0bce; /* Azul oscuro */
+}
+
+footer h1 {
+    color: #B22222;
+}
+
+p {
+    font-weight: bold; /* Aplica negrita al texto */
+    background-color: rgba(221, 221, 215, 0.7); /* Fondo oscuro con transparencia */
+    padding: 1px; /* Añade espacio interior para que el texto no esté pegado al borde */
+    border-radius: 2px; /* Bordes redondeados para un mejor aspecto */
+    color: #254222; /* Color del texto en blanco para que contraste con el fondo oscuro */
+}
+
+
+.video-container {
+    position: fixed;
+    top: 10px; /* Ajusta la posición vertical según necesites */
+    right: 10px; /* Ajusta la posición horizontal según necesites */
+    width: 200px; /* Ajusta el ancho del video */
+    z-index: 1000; /* Asegura que el video esté por encima de otros elementos */
+}
+
+.video-container video {
+display: flex;
+    height: auto; /* Mantendrá la proporción del video */
+}
+
+
+main , header, footer{
+    background-image: url('GALAXIA.webp'); /* Cambia la ruta por la de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    padding: 20px; /* Añade padding para evitar que el texto esté muy cerca del borde */
+}
+
+
+
+
+/* Contenedor del carrusel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    display: flex;
+    justify-content: flex-start; /* Alinea el carrusel a la izquierda */
+}
+
+/* Carrusel */
+.carousel {
+    
+    display: flex;
+    justify-content: flex-start; /* Alinea las imágenes del carrusel a la izquierda */
+    animation: slide 50s infinite; /* Duración total de 24 segundos (6 imágenes x 4 segundos) */
+    transition: transform 8s ease-in-out; /* Transición suave */
+}
+
+/* Elemento del carrusel */
+.carousel-item {
+    min-width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Imágenes del carrusel */
+.carousel-item img {
+    width: 38%;
+    height: 88%;
+    display: block;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    16.67% { transform: translateX(-100%); }
+    33.34% { transform: translateX(-200%); }
+    50.01% { transform: translateX(-300%); }
+    66.68% { transform: translateX(-400%); }
+    83.35% { transform: translateX(-500%); }
+    100% { transform: translateX(0); }
+}
+
+body {
+    background-color: #d5dfdd; /* Cambia el color a tu preferencia */
+    background-image: url(''); /* Cambia la ruta por la de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+}
+
+
+main .digitalin p {
+    display: flex;
+    text-align: center;
+    color: rgba(34, 45, 204, 0.959); /* Color original */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+main .digitalin p:hover {
+    color: #B22222; /* Color rojo metálico */
+}
+
+
+.protest-guerrilla-regular {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color:  rgb(71, 95, 5, 0.911);
+  }
+
+
+/* Alinea el texto del h2 al centro */
+/*no lo voy a usar aun, lo dejare para agregarle aspectos con javascript*/
+#  {
+    
+    text-align: center;
+  }
+  
+  /* Alinea el texto del h3 al centro */
+  # {
+    text-align: center;
+  }
+  
+
+.whiatcomplogo {
+    background-color: rgba(251, 252, 249, 0.274);
+    display: flex;
+    width: 100%; /* Ajusta el contenedor para que ocupe todo el ancho del padre */
+    height: 150px;
+
+}
+
+
+
+/* Estilo general del contenedor nav */
+nav {
+    display: flex; /* Hace que el contenedor nav use Flexbox */
+    justify-content: flex-start; /* Alinea el contenido al final del contenedor (a la derecha) */
+}
+
+/* Estilo de la lista */
+.primernavegador {
+    height: 28px;
+    background-color:  rgba(49, 41, 41, 0.911);
+    width: 100%;
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto del <ul> */
+    margin: 0; /* Elimina el margen por defecto del <ul> */
+    display: flex; /* Usa Flexbox para alinear los elementos horizontalmente */
+}
+
+/* Estilo de los elementos de la lista */
+.primernavegador li {
+    margin-left: 40px; /* Espacio entre los elementos de la lista */
+}
+
+/* Opcional: Estilo de los enlaces */
+.primernavegador a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #f8edede1; /* Cambia el color del texto del enlace */
+}
+
+
+h1{ 
+    text-align: center;
+}
+
+
+/* Estilo del footer */
+
+
+footer {
+    border: 4px solid rgba(47, 58, 17, 0.911); /* Borde del footer: 3px de grosor, sólido, color gris oscuro */
+}
+
+footer {
+    display: flex; /* Usa Flexbox para alinear el contenido */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: ; /* Centra el contenido verticalmente */
+    text-align: center; /* Opcional: Alinea el texto en el centro */
+    padding: 20px; /* Opcional: Agrega un padding para espacio interno */
+    background-color: rgba(71, 95, 5, 0.911); /* Opcional: Cambia el color de fondo del footer */
+}
+
+/* Estilo de la imagen en el footer */
+footer .imagenfooter img {
+    max-width: 30%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+/* Estilo para el h1 dentro del footer */
+footer h1 {
+    margin: 0 0 20px 0; /* Espacio debajo del h1, ajusta según sea necesario */
+}
+
+/* Estilo para el párrafo en el footer */
+footer p {
+    margin: 10px 0 0 0; /* Espacio alrededor del párrafo, ajusta según sea necesario */
+}
+p {
+    text-align: justify;
+}
+
+footer {
+    border: 4px solid rgba(47, 58, 17, 0.911); /* Borde del footer */
+    display: flex; /* Usa Flexbox para alinear el contenido */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Opcional: Alinea el texto en el centro */
+    padding: 30px; /* Opcional: Agrega un padding para espacio interno */
+    background-color: rgba(224, 228, 212, 0.911); /* Cambia el color de fondo del footer */
+}
+
+@keyframes colorChange {
+    0% {
+      color: rgb(179, 23, 23);
+    }
+    50% {
+      color: rgb(64, 219, 167);
+    }
+    100% {
+      color: rgb(247, 242, 242);
+    }
+  }
+  
+  .protest-guerrilla-regular h1 {
+    animation: colorChange 2s infinite;
+  }
+  
+
+/* Contenedor para manejar la superposición de imágenes */
+.whatsapp-img-container {
+
+    position: static;
+    width: 100px;
+    height: 180px;
+}
+.custom-button {
+    font-family: 'Aptos', sans-serif; /* Tipo de letra */
+    color: white; /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: colorCycle 4.6s infinite; /* Animación de ciclo de colores */
+    border-radius: 18px; /* Bordes redondeados */
+    margin: 20px; /* Margen pequeño para separar los botones */
+}
+
+.custom-button:hover {
+    color: rgb(149, 206, 166); /* Color del texto al pasar el cursor */
+}
+
+/* Ciclo de cambio de colores */
+@keyframes colorCycle {
+    40% { background-color: #ce120c; }
+    33% { background-color: rgb(40, 141, 20); }
+    66% { background-color: rgb(105, 71, 71); }
+    100% { background-color: rgb(22, 142, 163); }
+}
+
+section {
+    display: inline-block;
+    margin-right: 10px; /* Pequeño margen entre las secciones */
+}
+
+
+#google_translate_element {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+    font-size: 16px;
+}
