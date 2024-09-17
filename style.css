@@ -3,6 +3,20 @@
 
 
 
+
+
+
+
+
+
+
+/*boton visual para translate ya que la website esta en ingles*/
+
+
+
+
+
+
 footer {
     padding: 20px;
     text-align: center;
@@ -16,18 +30,20 @@ footer {
     margin: 10px 0;
 }
 
-/* Estilo inicial del texto */
-footer h1, footer p, footer a {
-    text-align: center;
-    color: black;
-    transition: color 0.3s ease;
+section#home h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-/* Cambiar a blanco al pasar el cursor */
-footer h1:hover, footer p:hover, footer a:hover {
-    color: rgba(255, 255, 255, 0.918);
+section#home p {
+text-align: center;    font-size: 16px;
+    color: #1a1616;
 }
-/* esta parte no tiene nada que ver con el footer anterior que es una seccion de footer dentro de otro footer*/
+
+section#home a {
+    color: #0073b1; /* LinkedIn color */
+    text-decoration: none;
+}
 
 section#home a:hover {
     text-decoration: underline;
@@ -49,15 +65,14 @@ body {
 /* Contenedor de la imagen del astronauta */
 .astronaut-container {
     position: relative;
-    display: inline-block;
-    margin-top: 50px;
+    display: flex;
 }
 
 /* Imagen del astronauta con animación de vuelo */
 .astronaut {
-    width: 400px;
-    height: auto;
-    animation: fly 3s ease-in-out infinite; /* Animación de vuelo */
+    width: 300px;
+    height: 300px;
+    animation: fly 4s ease-in-out infinite; /* Animación de vuelo */
 }
 
 /* Animación de vuelo (moverse hacia arriba y abajo) */
@@ -271,10 +286,7 @@ p {
         height: auto;
     }
 
-    .whatsapp-img-container {
-        width: 10px; /* Reduce el tamaño de la imagen de WhatsApp */
-        height: 100px;
-    }
+
 
     .video-container {
         width: 150px; /* Ajusta el tamaño del video */
@@ -601,13 +613,13 @@ footer {
 }
 
 @keyframes colorChange {
-    30% {
+    0% {
       color: rgb(179, 23, 23);
     }
     50% {
       color: rgb(64, 219, 167);
     }
-    60% {
+    100% {
       color: rgb(247, 242, 242);
     }
   }
@@ -618,12 +630,37 @@ footer {
   
 
 /* Contenedor para manejar la superposición de imágenes */
-.whatsapp-img-container {
 
-    position: static;
-    width: 100px;
-    height: 180px;
+
+
+/* Contenedor de la imagen */
+.c {
+    display: flex; /* Usa flexbox para centrar la imagen si es necesario */
+    justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
+    align-items: center; /* Centra la imagen verticalmente dentro del contenedor */
 }
+
+/* Imagen de WhatsApp */
+.whatsapp-img {
+    width: 200px; /* Tamaño aumentado un 400% (original de 50px) */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    border-radius: 50%; /* Hace que la imagen sea circular si tiene forma cuadrada */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-img {
+        width: 160px; /* Ajusta el tamaño para pantallas más pequeñas, aumentado un 400% del tamaño original */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-img {
+        width: 120px; /* Ajusta aún más el tamaño para pantallas muy pequeñas, aumentado un 400% del tamaño original */
+    }
+}
+
 .custom-button {
     font-family: 'Aptos', sans-serif; /* Tipo de letra */
     color: white; /* Color del texto */
@@ -659,7 +696,7 @@ section {
     bottom: 10px;
     right: 10px;
     z-index: 1000;
-    background-color: rgba(78, 153, 163, 0.8); /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
     padding: 5px;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
