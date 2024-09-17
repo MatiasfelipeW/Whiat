@@ -1,5 +1,37 @@
-/*boton visual para translate ya que la website esta en ingles*/
 
+
+
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
+/* Estilo inicial del texto */
+footer h1, footer p, footer a {
+    text-align: center;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* Cambiar a blanco al pasar el cursor */
+footer h1:hover, footer p:hover, footer a:hover {
+    color: rgba(255, 255, 255, 0.918);
+}
+/* esta parte no tiene nada que ver con el footer anterior que es una seccion de footer dentro de otro footer*/
+
+section#home a:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -7,7 +39,6 @@
 /* hare  que el astronauta tenga mas efectos para que la visibilidad de la pagina sea mas interactiva un poco saturada pero con funcionalidad*/
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
 .about-section {
@@ -24,7 +55,7 @@ body {
 
 /* Imagen del astronauta con animación de vuelo */
 .astronaut {
-    width: 200px;
+    width: 400px;
     height: auto;
     animation: fly 3s ease-in-out infinite; /* Animación de vuelo */
 }
@@ -82,7 +113,6 @@ body {
  /*  hare girar el planeta tierra y le dare un tono como si fuese la capa de ozono */
  body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
 .services-section {
@@ -103,7 +133,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%; /* Hace que la imagen tenga forma redonda */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); /* Capa blanca suave */
+    box-shadow: 0 0 80px rgba(221, 240, 243, 0.4); /* Capa blanca suave */
     animation: rotate 60s linear infinite; /* Rotación lenta (60 segundos por ciclo) */
 }
 
@@ -184,8 +214,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
     padding: 20px;
     opacity: 0;
     transition: opacity 0.3s   
@@ -244,8 +272,8 @@ p {
     }
 
     .whatsapp-img-container {
-        width: 80px; /* Reduce el tamaño de la imagen de WhatsApp */
-        height: 140px;
+        width: 10px; /* Reduce el tamaño de la imagen de WhatsApp */
+        height: 100px;
     }
 
     .video-container {
@@ -359,7 +387,7 @@ main p {
 
 p:hover {
 
-    color: #cf0b0bce; /* Azul oscuro */
+    color: #efeef8e1; /* Azul oscuro */
 }
 
 footer h1 {
@@ -368,10 +396,10 @@ footer h1 {
 
 p {
     font-weight: bold; /* Aplica negrita al texto */
-    background-color: rgba(221, 221, 215, 0.7); /* Fondo oscuro con transparencia */
+    background-color: rgba(8, 8, 8, 0.13); /* Fondo oscuro con transparencia */
     padding: 1px; /* Añade espacio interior para que el texto no esté pegado al borde */
     border-radius: 2px; /* Bordes redondeados para un mejor aspecto */
-    color: #254222; /* Color del texto en blanco para que contraste con el fondo oscuro */
+    color: #0b0e0b; /* Color del texto en blanco para que contraste con el fondo oscuro */
 }
 
 
@@ -443,7 +471,6 @@ main , header, footer{
 }
 
 body {
-    background-color: #d5dfdd; /* Cambia el color a tu preferencia */
     background-image: url(''); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -454,12 +481,12 @@ body {
 main .digitalin p {
     display: flex;
     text-align: center;
-    color: rgba(34, 45, 204, 0.959); /* Color original */
+    color: rgba(237, 237, 241, 0.959); /* Color original */
     transition: color 0.3s ease; /* Transición suave al cambiar de color */
 }
 
 main .digitalin p:hover {
-    color: #B22222; /* Color rojo metálico */
+    color: #0e0202; /* Color rojo metálico */
 }
 
 
@@ -539,10 +566,9 @@ footer {
     display: flex; /* Usa Flexbox para alinear el contenido */
     flex-direction: column; /* Coloca los elementos en una columna */
     align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: ; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
     text-align: center; /* Opcional: Alinea el texto en el centro */
     padding: 20px; /* Opcional: Agrega un padding para espacio interno */
-    background-color: rgba(71, 95, 5, 0.911); /* Opcional: Cambia el color de fondo del footer */
 }
 
 /* Estilo de la imagen en el footer */
@@ -572,17 +598,16 @@ footer {
     justify-content: center; /* Centra el contenido verticalmente */
     text-align: center; /* Opcional: Alinea el texto en el centro */
     padding: 30px; /* Opcional: Agrega un padding para espacio interno */
-    background-color: rgba(224, 228, 212, 0.911); /* Cambia el color de fondo del footer */
 }
 
 @keyframes colorChange {
-    0% {
+    30% {
       color: rgb(179, 23, 23);
     }
     50% {
       color: rgb(64, 219, 167);
     }
-    100% {
+    60% {
       color: rgb(247, 242, 242);
     }
   }
@@ -634,7 +659,7 @@ section {
     bottom: 10px;
     right: 10px;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    background-color: rgba(78, 153, 163, 0.8); /* Fondo semi-transparente */
     padding: 5px;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
