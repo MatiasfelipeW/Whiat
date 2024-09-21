@@ -223,12 +223,12 @@ body {
 
 /* Cambia el color y alinea el texto al centro para los párrafos con clase P1 hidden-text en la sección #services */
 #services  .P1.hidden-text {
-    color: #3f3b3b; /* Cambia el color del texto según tu preferencia */
+    color: #ffffff; /* Cambia el color del texto según tu preferencia */
     text-align: unset; /* Alinea el texto al centro */
     
 }
 #about .P1.hidden-text {
-    color: #3f3b3b;
+    color: #ffffff;
     text-align: unset;
 }
 
@@ -534,8 +534,7 @@ main .digitalin p:hover {
     font-family: "Protest Guerrilla", sans-serif;
     font-weight: 100;
     font-style: normal;
-    color:  rgb(71, 95, 5, 0.911);
-  }
+}
 
 
 /* Alinea el texto del h2 al centro */
@@ -552,7 +551,7 @@ main .digitalin p:hover {
   
 
 .whiatcomplogo {
-    background-color: rgba(251, 252, 249, 0.274);
+    background-color: rgba(175, 30, 30, 0.123);
     display: flex;
     width: 100%; /* Ajusta el contenedor para que ocupe todo el ancho del padre */
     height: 150px;
@@ -569,9 +568,9 @@ nav {
 
 /* Estilo de la lista */
 .primernavegador {
-    height: 28px;
-    background-color:  rgba(49, 41, 41, 0.911);
+    height: 30px;
     width: 100%;
+    font-size: 18px;
     list-style-type: none; /* Elimina los puntos de la lista */
     padding: 0; /* Elimina el padding por defecto del <ul> */
     margin: 0; /* Elimina el margen por defecto del <ul> */
@@ -580,13 +579,13 @@ nav {
 
 /* Estilo de los elementos de la lista */
 .primernavegador li {
-    margin-left: 40px; /* Espacio entre los elementos de la lista */
+    margin-left: 14px; /* Espacio entre los elementos de la lista */
 }
 
 /* Opcional: Estilo de los enlaces */
 .primernavegador a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #f8edede1; /* Cambia el color del texto del enlace */
+    color: #0f0e0ee1; /* Cambia el color del texto del enlace */
 }
 
 

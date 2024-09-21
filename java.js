@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Mostrar el contenido de la página
         content.style.display = 'block';
-    }, 3400); // 4000 milisegundos = 4 segundos
+    }, 5000); // 4000 milisegundos = 4 segundos
 });
