@@ -12,10 +12,38 @@
 
 /*boton visual para translate ya que la website esta en ingles*/
 
+/* Estilos para el preloader */
+/* Estilos para el preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Fondo negro mientras el video se reproduce */
+    z-index: 9999; /* Asegura que esté por encima de todo el contenido */
+}
+
+#preloader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video a la pantalla */
+}
+
+/* Inicialmente ocultamos el contenido principal */
+#content {
+    display: none;
+}
 
 
 
-
+/* Oculta el preloader cuando se carga la página */
+body.loaded #preloader {
+    display: none;
+}
 
 footer {
     padding: 20px;
@@ -102,7 +130,7 @@ body {
 .fire::before,
 .fire::after {
     content: '';
-    position: absolute;
+    position: left;
     width: 60px;
     height: 60px;
     background: radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,69,0,1) 60%, rgba(255,0,0,1) 100%);
@@ -613,13 +641,14 @@ footer {
 }
 
 @keyframes colorChange {
-    0% {
-      color: rgb(179, 23, 23);
+    70% {
+      color: rgb(14, 13, 13);
     }
-    50% {
+    70% {
       color: rgb(64, 219, 167);
     }
-    100% {
+    
+730% {
       color: rgb(247, 242, 242);
     }
   }
@@ -630,37 +659,11 @@ footer {
   
 
 /* Contenedor para manejar la superposición de imágenes */
+.whatsapp-img-container {
 
-
-
-/* Contenedor de la imagen */
-.c {
-    display: flex; /* Usa flexbox para centrar la imagen si es necesario */
-    justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
-    align-items: center; /* Centra la imagen verticalmente dentro del contenedor */
+    width: 20px;
+    height: 100px;
 }
-
-/* Imagen de WhatsApp */
-.whatsapp-img {
-    width: 200px; /* Tamaño aumentado un 400% (original de 50px) */
-    height: auto; /* Mantiene las proporciones de la imagen */
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-    border-radius: 50%; /* Hace que la imagen sea circular si tiene forma cuadrada */
-}
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .whatsapp-img {
-        width: 160px; /* Ajusta el tamaño para pantallas más pequeñas, aumentado un 400% del tamaño original */
-    }
-}
-
-@media (max-width: 480px) {
-    .whatsapp-img {
-        width: 120px; /* Ajusta aún más el tamaño para pantallas muy pequeñas, aumentado un 400% del tamaño original */
-    }
-}
-
 .custom-button {
     font-family: 'Aptos', sans-serif; /* Tipo de letra */
     color: white; /* Color del texto */
@@ -680,8 +683,8 @@ footer {
 /* Ciclo de cambio de colores */
 @keyframes colorCycle {
     40% { background-color: #ce120c; }
-    33% { background-color: rgb(40, 141, 20); }
-    66% { background-color: rgb(105, 71, 71); }
+    33% { background-color: rgb(141, 20, 125); }
+    66% { background-color: rgb(8, 8, 8); }
     100% { background-color: rgb(22, 142, 163); }
 }
 
