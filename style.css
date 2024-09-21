@@ -314,9 +314,6 @@ p {
     }
 
 
-
-    .video-container {
-        width: 150px; /* Ajusta el tamaño del video */
     }
 
     footer p {
@@ -347,11 +344,7 @@ main p {
         padding: 10px;
     }
 
-    .video-container {
-        width: 150px; /* Reduce el tamaño del video para pantallas más pequeñas */
-        top: 5px;
-        right: 5px;
-    }
+
 
     .carousel-item img {
         width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
@@ -442,18 +435,8 @@ p {
 }
 
 
-.video-container {
-    position: fixed;
-    top: 10px; /* Ajusta la posición vertical según necesites */
-    right: 10px; /* Ajusta la posición horizontal según necesites */
-    width: 200px; /* Ajusta el ancho del video */
-    z-index: 1000; /* Asegura que el video esté por encima de otros elementos */
-}
 
-.video-container video {
-display: flex;
-    height: auto; /* Mantendrá la proporción del video */
-}
+
 
 
 main , header, footer{
