@@ -15,7 +15,7 @@
 /* Estilos para el preloader */
 /* Estilos para el preloader */
 #preloader {
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -501,14 +501,14 @@ body {
 
 
 main .digitalin p {
-    display: flex;
-    text-align: center;
-    color: rgba(237, 237, 241, 0.959); /* Color original */
+
+
+    color: rgba(253, 250, 250, 0.959); /* Color original */
     transition: color 0.3s ease; /* Transición suave al cambiar de color */
 }
 
 main .digitalin p:hover {
-    color: #0e0202; /* Color rojo metálico */
+    color: #0f0f0f; /* Color rojo metálico */
 }
 
 
@@ -638,12 +638,7 @@ footer {
   }
   
 
-/* Contenedor para manejar la superposición de imágenes */
-.whatsapp-img-container {
 
-    width: 20px;
-    height: 100px;
-}
 .custom-button {
     font-family: 'Aptos', sans-serif; /* Tipo de letra */
     color: white; /* Color del texto */
