@@ -10,12 +10,13 @@
 
 
 
+
 /*boton visual para translate ya que la website esta en ingles*/
 
 /* Estilos para el preloader */
 /* Estilos para el preloader */
 #preloader {
-    position: static;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
