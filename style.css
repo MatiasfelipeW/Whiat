@@ -668,15 +668,20 @@ section {
     margin-right: 10px; /* Pequeño margen entre las secciones */
 }
 
-
 #google_translate_element {
     position: fixed;
     bottom: 10px;
     right: 10px;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente, mayor opacidad */
     padding: 5px;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
     font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Asegura que haya un borde visible */
+    -webkit-backdrop-filter: blur(10px); /* Para iPhones, añade un efecto de desenfoque */
+    backdrop-filter: blur(10px);
+    color: black !important; /* Evita que el traductor cambie el color del texto */
+    -webkit-text-fill-color: black !important; /* Para Safari, asegura que el color no sea afectado */
 }
+
