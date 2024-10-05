@@ -130,16 +130,18 @@
         <!--Parte para la alerta -->
 
         <div id="alert" style="background-color: rgba(0, 0, 0, 0.8); color: #ffffffe0; padding: 20px; position: fixed; top: 20%; left: 50%; transform: translate(-50%, -50%); border: 2px solid #00ff99; border-radius: 10px; text-align: center; z-index: 1000;">
-            <h2 style="font-size: 24px; color: #00ff99;">¡Atención, Explorador da click en las imagenes!</h2>
+            <h2 id="alertText" style="font-size: 24px; color: #00ff99;">¡Atención, Explorador da click en las imagenes!</h2>
             <p style="font-size: 18px;">Haz click en los ovnis y planetas para descubrir más información sobre ellos.</p>
-            <button id="closeAlert" style="background-color: #00ff99; color: #000; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">Entendido</button>
+            <button id="closeAlert" style="-webkit-appearance: none; background-color: #00ff99; color: #000; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;">Entendido</button>
         </div>
         
         <script>
             document.getElementById('closeAlert').addEventListener('click', function() {
                 document.getElementById('alert').style.display = 'none';
+                document.getElementById('alertText').style.color = '#ff0000'; // Cambia el color del texto al hacer clic
             });
         </script>
+        
         
     
         
