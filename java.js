@@ -11,3 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         content.style.display = 'block';
     }, 5000); // 4000 milisegundos = 4 segundos
 });
+
+
+document.getElementById('alertText').style.color = '#ff0000';
+
