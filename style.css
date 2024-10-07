@@ -93,11 +93,11 @@ section#home h1 {
 
 section#home p {
 text-align: center;    font-size: 16px;
-    color: #1a1616;
+    color: #f9f9fc;
 }
 
 section#home a {
-    color: #0073b1; /* LinkedIn color */
+    color: #f11109; /* LinkedIn color */
     text-decoration: none;
 }
 
