@@ -33,3 +33,8 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
 });
 
+document.getElementById('closeAlert').addEventListener('click', function() {
+    document.getElementById('alert').style.display = 'none';
+    document.getElementById('alertText').style.color = '#ff0000'; // Cambia el color del texto al hacer clic
+});
+

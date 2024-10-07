@@ -769,3 +769,42 @@ body {
 
 
 
+/* Estilos para la alerta */
+#alert {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffffe0;
+    padding: 20px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#alertText {
+    font-size: 24px;
+    color: #00ff99; /* Color inicial del texto */
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Estilos del botón */
+button {
+    -webkit-appearance: none;
+    background-color: #00ff99;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
