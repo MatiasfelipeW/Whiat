@@ -782,15 +782,26 @@ body {
     border-radius: 10px;
     text-align: center;
     z-index: 1000;
+    width: 80%; /* Ajustable para buena visibilidad en móviles */
+    max-width: 400px;
 }
 
+/* Estilo para el h2 */
 #alertText {
     font-size: 24px;
-    color: #00ff99; /* Color inicial del texto */
+    color: #ff3333; /* Rojo visible */
 }
 
-p {
+/* Estilo inicial para el párrafo */
+#alertParagraph {
     font-size: 18px;
+    color: #00ff99; /* Verde ovni */
+    transition: color 0.3s ease; /* Suave transición al pasar el cursor */
+}
+
+/* Cambia el color del párrafo a blanco cuando se pasa el cursor */
+#alertParagraph:hover {
+    color: #ffffff;
 }
 
 /* Estilos del botón */
@@ -804,6 +815,26 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc88; /* Efecto hover en el botón */
+}
+
+/* Hacer la alerta visible y amigable en dispositivos móviles */
+@media (max-width: 600px) {
+    #alert {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    #alertText {
+        font-size: 20px;
+    }
+
+    #alertParagraph {
+        font-size: 16px;
+    }
 }
 
 
