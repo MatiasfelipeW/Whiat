@@ -697,6 +697,7 @@ section {
     margin-right: 10px; /* Pequeño margen entre las secciones */
 }
 
+
 #translator_container {
     position: fixed;
     left: 0;
@@ -708,11 +709,13 @@ section {
     background-color: transparent;
     padding: 10px;
     z-index: 1000;
-    transition: transform 0.3s ease-in-out; /* Transición suave */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1; /* Agregado para controlar la visibilidad */
 }
 
 #translator_container.hidden {
-    transform: translate(-100%, -50%); /* Mueve el contenedor fuera de la vista a la izquierda */
+    transform: translate(-100%, -50%);
+    opacity: 0; /* El contenedor desaparece suavemente */
 }
 
 #translator_logo {
@@ -761,6 +764,7 @@ section {
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal en pantallas pequeñas */
 }
 
 

@@ -16,4 +16,20 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('alertText').style.color = '#ff0000';
 
 
+let lastScrollTop = 0;
+const translatorContainer = document.getElementById('translator_container');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Usuario bajando el cursor
+        translatorContainer.classList.add('hidden');
+    } else {
+        // Usuario subiendo el cursor
+        translatorContainer.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+});
 
