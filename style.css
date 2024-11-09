@@ -93,7 +93,7 @@ section#home h1 {
 
 section#home p {
 text-align: center;    font-size: 16px;
-    color: #000000;
+    color: #ffffffcd;
 }
 
 section#home a {
@@ -442,7 +442,7 @@ p:hover {
 }
 
 footer h1 {
-    color: #000000;
+    color: #fffdfd;
 }
 
 p {
@@ -450,7 +450,7 @@ p {
     background-color: rgba(8, 8, 8, 0.13); /* Fondo oscuro con transparencia */
     padding: 1px; /* Añade espacio interior para que el texto no esté pegado al borde */
     border-radius: 2px; /* Bordes redondeados para un mejor aspecto */
-    color: #0b0e0b; /* Color del texto en blanco para que contraste con el fondo oscuro */
+    color: #efefef; /* Color del texto en blanco para que contraste con el fondo oscuro */
 }
 
 
@@ -459,7 +459,7 @@ p {
 
 
 main , header, footer{
-    background-image: url('GALAXIA.webp'); /* Cambia la ruta por la de tu imagen */
+    background-image: url('whitegal.jpg'); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -586,7 +586,7 @@ nav {
 /* Opcional: Estilo de los enlaces */
 .primernavegador a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #300726e0; /* Cambia el color del texto del enlace */
+    color: #ffffffe0; /* Cambia el color del texto del enlace */
 }
 
 
@@ -642,7 +642,7 @@ footer {
 
 @keyframes colorChange {
     70% {
-      color: #680e51e0;
+      color: #0edb6ee0;
     }
     70% {
     }

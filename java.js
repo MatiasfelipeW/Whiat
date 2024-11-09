@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Mostrar el contenido de la página
         content.style.display = 'block';
-    }, 5000); // 4000 milisegundos = 4 segundos
+    }, 7000); // 4000 milisegundos = 4 segundos
 });
 
 
