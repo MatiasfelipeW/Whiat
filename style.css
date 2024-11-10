@@ -97,7 +97,7 @@ text-align: center;    font-size: 16px;
 }
 
 section#home a {
-    color: #0a1147; /* LinkedIn color */
+    color: #20c8ce; /* LinkedIn color */
     text-decoration: none;
 }
 
@@ -642,7 +642,7 @@ footer {
 
 @keyframes colorChange {
     70% {
-      color: #0edb6ee0;
+      color: #e60808d4;
     }
     70% {
     }
@@ -768,7 +768,7 @@ body {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #00ff99;
+    border: 2px solid #eb1111e2;
     border-radius: 10px;
     text-align: center;
     z-index: 1000;
@@ -785,19 +785,19 @@ body {
 /* Estilo inicial para el párrafo */
 #alertParagraph {
     font-size: 18px;
-    color: #00ff99; /* Verde ovni */
+    color: #161515e3; /* Verde ovni */
     transition: color 0.3s ease; /* Suave transición al pasar el cursor */
 }
 
 /* Cambia el color del párrafo a blanco cuando se pasa el cursor */
 #alertParagraph:hover {
-    color: #e01bc6;
+    color: #14a123;
 }
 
 /* Estilos del botón */
 button {
     -webkit-appearance: none;
-    background-color: #00ff99;
+    background-color:#ff3333;
     color: #000;
     border: none;
     padding: 10px 20px;
