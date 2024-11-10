@@ -785,7 +785,7 @@ body {
 /* Estilo inicial para el párrafo */
 #alertParagraph {
     font-size: 18px;
-    color: #161515e3; /* Verde ovni */
+    color: #e1e7ec88; /* Verde ovni */
     transition: color 0.3s ease; /* Suave transición al pasar el cursor */
 }
 
