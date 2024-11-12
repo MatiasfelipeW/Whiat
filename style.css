@@ -291,10 +291,10 @@ body {
   @media (max-width: 767px) {
     .hidden-text-container {
       /* Increase touch target area */
-    padding: 20px;
+      padding: 20px;
     }
-
-
+  }
+  
 /* Estilos generales */
 body {
     font-family: 'Protest Guerrilla', sans-serif;
@@ -327,17 +327,19 @@ p {
         line-height: 1.4;
     }
 
- 
-    
+    .carousel-item img {
+        width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
+        height: auto;
+    }
 
 
-    
+    }
 
     footer p {
         font-size: 14px; /* Ajusta el tamaño del texto en el footer */
         margin: 5px 10px;
     }
-
+}
 
 /* Estilos generales para todos los dispositivos */
 main p {
@@ -363,7 +365,10 @@ main p {
 
 
 
-
+    .carousel-item img {
+        width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
+        height: auto;
+    }
 
     footer {
         padding: 15px;
@@ -454,7 +459,7 @@ p {
 
 
 main , header, footer{
-    background-image: url('Black.jpg'); /* Cambia la ruta por la de tu imagen */
+    background-image: url('whitegal.jpg'); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -464,6 +469,47 @@ main , header, footer{
 
 
 
+/* Contenedor del carrusel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    display: flex;
+    justify-content: flex-start; /* Alinea el carrusel a la izquierda */
+}
+
+/* Carrusel */
+.carousel {
+    
+    display: flex;
+    justify-content: flex-start; /* Alinea las imágenes del carrusel a la izquierda */
+    animation: slide 50s infinite; /* Duración total de 24 segundos (6 imágenes x 4 segundos) */
+    transition: transform 8s ease-in-out; /* Transición suave */
+}
+
+/* Elemento del carrusel */
+.carousel-item {
+    min-width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Imágenes del carrusel */
+.carousel-item img {
+    width: 38%;
+    height: 88%;
+    display: block;
+}
+
+/* Animación del carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    16.67% { transform: translateX(-100%); }
+    33.34% { transform: translateX(-200%); }
+    50.01% { transform: translateX(-300%); }
+    66.68% { transform: translateX(-400%); }
+    83.35% { transform: translateX(-500%); }
+    100% { transform: translateX(0); }
+}
 
 body {
     background-image: url(''); /* Cambia la ruta por la de tu imagen */
