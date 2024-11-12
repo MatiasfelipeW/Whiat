@@ -7,6 +7,15 @@
 
 
 
+.email {
+    color: black; /* Color inicial del correo electrónico */
+    text-decoration: none; /* Opcional, para quitar el subrayado */
+    transition: color 0.3s ease; /* Animación suave */
+}
+
+.email:hover {
+    color: red; /* Cambia a rojo al pasar el cursor */
+}
 
 
 
@@ -33,6 +42,36 @@
     backface-visibility: hidden;
     perspective: 1000;
 }
+
+/* Header, vamod a modificar parcialmente*/
+/* Estilos para centrar el menú y cambiar el color al pasar el cursor */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajusta la altura según lo que necesites */
+}
+
+nav .primernavegador {
+    list-style-type: none;
+    display: flex;
+    gap: 50px; /* Espacio entre los elementos del menú */
+    padding: 0;
+    margin: 0;
+}
+
+nav .primernavegador li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.91); /* Color inicial */
+    font-size: 30px;
+    transition: color 0.3s ease; /* Animación suave */
+}
+
+nav .primernavegador li a:hover {
+    color: red; /* Color al pasar el cursor */
+}
+
+
 
 /* Inicialmente ocultamos el contenido principal */
 #content {
@@ -327,13 +366,6 @@ p {
         line-height: 1.4;
     }
 
-    .carousel-item img {
-        width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
-        height: auto;
-    }
-
-
-    }
 
     footer p {
         font-size: 14px; /* Ajusta el tamaño del texto en el footer */
@@ -365,10 +397,7 @@ main p {
 
 
 
-    .carousel-item img {
-        width: 100%; /* Asegura que las imágenes del carrusel ocupen todo el ancho */
-        height: auto;
-    }
+
 
     footer {
         padding: 15px;
@@ -459,7 +488,7 @@ p {
 
 
 main , header, footer{
-    background-image: url('whitegal.jpg'); /* Cambia la ruta por la de tu imagen */
+    background-image: url('Black.jpg'); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -469,47 +498,6 @@ main , header, footer{
 
 
 
-/* Contenedor del carrusel */
-.carousel-container {
-    width: 100%;
-    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
-    display: flex;
-    justify-content: flex-start; /* Alinea el carrusel a la izquierda */
-}
-
-/* Carrusel */
-.carousel {
-    
-    display: flex;
-    justify-content: flex-start; /* Alinea las imágenes del carrusel a la izquierda */
-    animation: slide 50s infinite; /* Duración total de 24 segundos (6 imágenes x 4 segundos) */
-    transition: transform 8s ease-in-out; /* Transición suave */
-}
-
-/* Elemento del carrusel */
-.carousel-item {
-    min-width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
-    box-sizing: border-box;
-    text-align: left;
-}
-
-/* Imágenes del carrusel */
-.carousel-item img {
-    width: 38%;
-    height: 88%;
-    display: block;
-}
-
-/* Animación del carrusel */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    16.67% { transform: translateX(-100%); }
-    33.34% { transform: translateX(-200%); }
-    50.01% { transform: translateX(-300%); }
-    66.68% { transform: translateX(-400%); }
-    83.35% { transform: translateX(-500%); }
-    100% { transform: translateX(0); }
-}
 
 body {
     background-image: url(''); /* Cambia la ruta por la de tu imagen */
@@ -550,14 +538,6 @@ main .digitalin p:hover {
     text-align: center;
   }
   
-
-.whiatcomplogo {
-    background-color: rgba(175, 30, 30, 0.123);
-    display: flex;
-    width: 100%; /* Ajusta el contenedor para que ocupe todo el ancho del padre */
-    height: 150px;
-
-}
 
 
 
@@ -651,11 +631,10 @@ footer {
       color: rgb(0, 0, 0);
     }
   }
-  
-  .protest-guerrilla-regular h1 {
-    animation: colorChange 2s infinite;
-  }
-  
+   .protest-guerrilla-regular h1 {
+    animation: colorChange 2s infinite; 
+    }
+
 
 
 .custom-button {
