@@ -7,16 +7,6 @@
 
 
 
-.email {
-    color: black; /* Color inicial del correo electrónico */
-    text-decoration: none; /* Opcional, para quitar el subrayado */
-    transition: color 0.3s ease; /* Animación suave */
-}
-
-.email:hover {
-    color: red; /* Cambia a rojo al pasar el cursor */
-}
-
 
 
 
