@@ -1,800 +1,255 @@
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos para el preloader */
+/* Estilo general */
+/* Preloader Styles */
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex; /* Cambiado para centrar el video */
-    justify-content: center;
-    align-items: center;
-    background-color: black; /* Fondo negro mientras el video se reproduce */
-    z-index: 9999; /* Asegura que esté por encima de todo el contenido */
+    background-color: red;
+    z-index: 9999;
+    animation: colorCycle 6s infinite;
 }
 
-#preloader video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta el video a la pantalla */
-    /* Evita parpadeo en dispositivos móviles */
-    backface-visibility: hidden;
-    perspective: 1000;
-}
-
-/* Header, vamod a modificar parcialmente*/
-/* Estilos para centrar el menú y cambiar el color al pasar el cursor */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px; /* Ajusta la altura según lo que necesites */
-}
-
-nav .primernavegador {
-    list-style-type: none;
-    display: flex;
-    gap: 50px; /* Espacio entre los elementos del menú */
-    padding: 0;
-    margin: 0;
-}
-
-nav .primernavegador li a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.91); /* Color inicial */
-    font-size: 30px;
-    transition: color 0.3s ease; /* Animación suave */
-}
-
-nav .primernavegador li a:hover {
-    color: red; /* Color al pasar el cursor */
-}
-
-
-
-/* Inicialmente ocultamos el contenido principal */
-#content {
-    display: none;
-}
-
-/* Oculta el preloader cuando se carga la página */
-body.loaded #preloader {
-    display: none;
-}
-
-/* Resto de tu CSS */
-footer {
-    padding: 20px;
-    text-align: center;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 10px 0;
-}
-
-/* Otros estilos aquí */
-
-
-/* Inicialmente ocultamos el contenido principal */
-#content {
-    display: none;
-}
-
-
-
-/* Oculta el preloader cuando se carga la página */
-body.loaded #preloader {
-    display: none;
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 10px 0;
-}
-
-section#home h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-section#home p {
-text-align: center;    font-size: 16px;
-    color: #ffffffcd;
-}
-
-section#home a {
-    color: #20c8ce; /* LinkedIn color */
-    text-decoration: none;
-}
-
-section#home a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-/* hare  que el astronauta tenga mas efectos para que la visibilidad de la pagina sea mas interactiva un poco saturada pero con funcionalidad*/
-body {
-    font-family: Arial, sans-serif;
-}
-
-.about-section {
-    text-align: center;
-    padding: 50px;
-}
-
-/* Contenedor de la imagen del astronauta */
-.astronaut-container {
-    position: relative;
-    display: flex;
-}
-
-/* Imagen del astronauta con animación de vuelo */
-.astronaut {
-    width: 300px;
-    height: 300px;
-    animation: fly 4s ease-in-out infinite; /* Animación de vuelo */
-}
-
-/* Animación de vuelo (moverse hacia arriba y abajo) */
-@keyframes fly {
-    0%, 100% {
-        transform: translateY(0); /* Posición original */
-    }
-    50% {
-        transform: translateY(-40px); /* Flotar hacia arriba */
-    }
-}
-
-
-/* Efecto de parpadeo del fuego */
-@keyframes flicker {
-    0% {
-        transform: scale(1);
-        opacity: 0.3;
-    }
-    100% {
-        transform: scale(1.2);
-        opacity: 0.2;
-    }
-}
-
-
-
-.fire::before {
-    left: -30px;
-}
-
-.fire::after {
-    right: -30px;
-}
-
-/* Estilos del texto */
-.P1 {
-    text-align: justify;
-    padding: 20px;
-}
-
-
- /*  hare girar el planeta tierra y le dare un tono como si fuese la capa de ozono */
- body {
-    font-family: Arial, sans-serif;
-}
-
-.services-section {
-    text-align: center;
-    padding: 50px;
-}
-
-/* Contenedor de la imagen del planeta Tierra */
-.earth-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-}
-
-/* Imagen del planeta Tierra con rotación */
-.earth {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%; /* Hace que la imagen tenga forma redonda */
-    box-shadow: 0 0 80px rgba(221, 240, 243, 0.4); /* Capa blanca suave */
-    animation: rotate 60s linear infinite; /* Rotación lenta (60 segundos por ciclo) */
-}
-
-/* Animación de rotación */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.overlay-image {
-    opacity: 0.6;
-}
-
-/* Estilos del texto */
-.P1 {
-    text-align: justify;
-    padding: 20px;
-}
-
-
-
-/* Define la animación para cambiar el color */
-@keyframes colorChange {
-    0% {
-        color: #ff0000; /* Rojo intenso */
-    }
-    50% {
-        color: #000000; /* Negro */
-    }
-    100% {
-        color: #ff0000; /* Rojo intenso */
-    }
-}
-
-/* Aplica la animación al h2 en las secciones especificadas */
-#about h2, 
-#services h2 {
-    animation: colorChange 3s infinite; /* Dura 0.6 segundos (0.3 segundos para rojo y 0.3 segundos para negro) y se repite infinitamente */
-}
-
-/* Cambia el color y alinea el texto al centro para los párrafos con clase P1 hidden-text en la sección #services */
-#services  .P1.hidden-text {
-    color: #000000; /* Cambia el color del texto según tu preferencia */
-    text-align: unset; /* Alinea el texto al centro */
-    
-}
-#about .P1.hidden-text {
-    color: #000000;
-    text-align: unset;
-}
-
-
-
-<section class="expandable-section">
-  <h2>Heading</h2>
-  <p class="expandable-text">
-    This is the text that will expand when tapped.
-  </p>
-</section>
-
-.hidden-text-container {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .overlay-image {
-    width: 100%;
-    height: auto;
-    cursor: pointer; /* Change the cursor to indicate a clickable area */
-  }
-  
-  .hidden-text {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s   
-   ease;
-    z-index: 1; /* Ensure the text is above the image */
-  }
-  
-  .hidden-text-container:hover .hidden-text,
-  .hidden-text-container:active .hidden-text {
-    opacity: 1;
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 767px) {
-    .hidden-text-container {
-      /* Increase touch target area */
-      padding: 20px;
-    }
-  }
-  
-/* Estilos generales */
-body {
-    font-family: 'Protest Guerrilla', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    text-align: justify;
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 10px 15px;
-}
-
-/* Ajustes para iPhone (ancho máximo 767px) */
-@media only screen and (max-width: 767px) {
-    p {
-        font-size: 16px; /* Reduce ligeramente el tamaño de la fuente */
-        margin: 10px 10px; /* Reduce los márgenes para maximizar el espacio */
-    }
-
-    .hidden-text-container {
-        max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-        padding: 10px;
-    }
-
-    .hidden-text {
-        font-size: 14px; /* Ajusta el tamaño de texto dentro del contenedor */
-        padding: 10px;
-        line-height: 1.4;
-    }
-
-
-    footer p {
-        font-size: 14px; /* Ajusta el tamaño del texto en el footer */
-        margin: 5px 10px;
-    }
-}
-
-/* Estilos generales para todos los dispositivos */
-main p {
-    text-align: center;
-    font-size: 20px;
-}
-
-/* Estilos específicos para iPhones */
-@media only screen and (max-width: 767px) {
-    main p {
-        font-size: 20px; /* Ajusta el tamaño de letra según sea necesario */
-    }
-
-    .hidden-text-container {
-        max-width: 100%; /* Asegura que el contenedor ocupe el ancho completo en pantallas pequeñas */
-    }
-
-    .hidden-text {
-        top: 50px;
-        left: 10px;
-        padding: 10px;
-    }
-
-
-
-
-
-    footer {
-        padding: 15px;
-    }
-}
-
-/* Otros estilos generales que se aplicarán a todas las pantallas */
-.hidden-text-container {
-    /* Tus estilos actuales */
-}
-
-.hidden-text {
-    /* Tus estilos actuales */
-}
-
-/* Resto de tu CSS */
-
-main p {
-    text-align: center;
-    font-size: 20px; /* Cambia 18px por el tamaño de letra que prefieras */
-}
-
-
-
-.hidden-text-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px; /* Ajusta el tamaño según sea necesario */
-    overflow: hidden;
-}
-
-.overlay-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hidden-text {
-    top: 100px;
-    left: 20px;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color:  #6f7c6ff1; /* Fondo semi-transparente */
-    padding: 20px;
-    box-sizing: border-box;
-    transition: opacity 0.5s ease;
-}
-
-.hidden-text-container:hover .hidden-text {
-    opacity: 1;
-}
-
-.hidden-text-container img {
-    display: flex;
-    transition: opacity 0.5s ease;
-}
-
-.hidden-text-container:hover img {
-    opacity: 0.2; /* La imagen se desvanecerá al pasar el cursor */
-}
-
-
-{
-    border: 4px solid rgba(47, 58, 17, 0.911); /* Borde del footer: 3px de grosor, sólido, color gris oscuro */
-}
-
-p:hover {
-
-    color: #96e77d; /* Azul oscuro */
-}
-
-footer h1 {
-    color: #fffdfd;
-}
-
-p {
-    font-weight: bold; /* Aplica negrita al texto */
-    background-color: rgba(8, 8, 8, 0.13); /* Fondo oscuro con transparencia */
-    padding: 1px; /* Añade espacio interior para que el texto no esté pegado al borde */
-    border-radius: 2px; /* Bordes redondeados para un mejor aspecto */
-    color: #efefef; /* Color del texto en blanco para que contraste con el fondo oscuro */
-}
-
-
-
-
-
-
-main , header, footer{
-    background-image: url('Black.jpg'); /* Cambia la ruta por la de tu imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen */
-    padding: 20px; /* Añade padding para evitar que el texto esté muy cerca del borde */
-}
-
-
-
-
-
-body {
-    background-image: url(''); /* Cambia la ruta por la de tu imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen */
-}
-
-
-main .digitalin p {
-
-
-    color: rgba(255, 255, 255, 0.959); /* Color original */
-    transition: color 0.3s ease; /* Transición suave al cambiar de color */
-}
-
-main .digitalin p:hover {
-    color: #0f0f0f; /* Color rojo metálico */
-}
-
-
-.protest-guerrilla-regular {
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-
-/* Alinea el texto del h2 al centro */
-/*no lo voy a usar aun, lo dejare para agregarle aspectos con javascript*/
-#  {
-    
-    text-align: center;
-  }
-  
-  /* Alinea el texto del h3 al centro */
-  # {
-    text-align: center;
-  }
-  
-
-
-
-/* Estilo general del contenedor nav */
-nav {
-    display: flex; /* Hace que el contenedor nav use Flexbox */
-    justify-content: flex-start; /* Alinea el contenido al final del contenedor (a la derecha) */
-}
-
-/* Estilo de la lista */
-.primernavegador {
-    height: 30px;
-    width: 100%;
-    font-size: 32px;
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el padding por defecto del <ul> */
-    margin: 0; /* Elimina el margen por defecto del <ul> */
-    display: flex; /* Usa Flexbox para alinear los elementos horizontalmente */
-}
-
-/* Estilo de los elementos de la lista */
-.primernavegador li {
-    margin-left: 14px; /* Espacio entre los elementos de la lista */
-}
-
-/* Opcional: Estilo de los enlaces */
-.primernavegador a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #ffffffe0; /* Cambia el color del texto del enlace */
-}
-
-
-h1{ 
-    text-align: center;
-}
-
-
-/* Estilo del footer */
-
-
-footer {
-    border: 4px solid rgba(47, 58, 17, 0.911); /* Borde del footer: 3px de grosor, sólido, color gris oscuro */
-}
-
-footer {
-    display: flex; /* Usa Flexbox para alinear el contenido */
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    text-align: center; /* Opcional: Alinea el texto en el centro */
-    padding: 20px; /* Opcional: Agrega un padding para espacio interno */
-}
-
-/* Estilo de la imagen en el footer */
-footer .imagenfooter img {
-    max-width: 30%; /* Asegura que la imagen no exceda el ancho del contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-}
-
-/* Estilo para el h1 dentro del footer */
-footer h1 {
-    margin: 0 0 20px 0; /* Espacio debajo del h1, ajusta según sea necesario */
-}
-
-/* Estilo para el párrafo en el footer */
-footer p {
-    margin: 10px 0 0 0; /* Espacio alrededor del párrafo, ajusta según sea necesario */
-}
-p {
-    text-align: justify;
-}
-
-footer {
-    border: 4px solid rgba(47, 58, 17, 0.911); /* Borde del footer */
-    display: flex; /* Usa Flexbox para alinear el contenido */
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    text-align: center; /* Opcional: Alinea el texto en el centro */
-    padding: 30px; /* Opcional: Agrega un padding para espacio interno */
-}
-
-@keyframes colorChange {
-    70% {
-      color: #e60808d4;
-    }
-    70% {
-    }
-    
-730% {
-      color: rgb(0, 0, 0);
-    }
-  }
-   .protest-guerrilla-regular h1 {
-    animation: colorChange 2s infinite; 
-    }
-
-
-
-.custom-button {
-    font-family: 'Aptos', sans-serif; /* Tipo de letra */
-    color: white; /* Color del texto */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    animation: colorCycle 4.6s infinite; /* Animación de ciclo de colores */
-    border-radius: 18px; /* Bordes redondeados */
-    margin: 20px; /* Margen pequeño para separar los botones */
-}
-
-.custom-button:hover {
-    color: rgb(255, 8, 8); /* Color del texto al pasar el cursor */
-}
-
-/* Ciclo de cambio de colores */
+/* Animación de cambio de color */
 @keyframes colorCycle {
-    40% { background-color: #ce120c; }
-    33% { background-color: rgb(141, 20, 125); }
-    66% { background-color: rgb(8, 8, 8); }
-    100% { background-color: rgb(22, 142, 163); }
+    0% { background-color: red; }
+    25% { background-color: grey; }
+    50% { background-color: white; }
+    75% { background-color: black; }
+    100% { background-color: red; }
 }
 
-section {
-    display: inline-block;
-    margin-right: 10px; /* Pequeño margen entre las secciones */
-}
-
-
-#translator_container {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    padding: 10px;
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 1; /* Agregado para controlar la visibilidad */
-}
-
-#translator_container.hidden {
-    transform: translate(-100%, -50%);
-    opacity: 0; /* El contenedor desaparece suavemente */
-}
-
-#translator_logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-#google_translate_element {
+/* Ocultar el preloader */
+body.loading #preloader {
     display: block;
 }
 
-/* Ajustes para pantallas más pequeñas */
-@media only screen and (max-width: 600px) {
-    #translator_container {
-        top: 40%;
-        padding: 5px;
-    }
-
-    #translator_logo {
-        width: 70px;
-        height: 70px;
-    }
+body.loaded #preloader {
+    display: none;
 }
 
-@media only screen and (max-width: 768px) {
-    #translator_container {
-        top: 45%;
-    }
 
-    #translator_logo {
-        width: 80px;
-        height: 80px;
-    }
+/* Estilo general de la barra de navegación */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (min-width: 1024px) {
-    #translator_logo {
-        width: 100px;
-        height: 100px;
-    }
+/* Estilo normal de los enlaces de la barra */
+.nav-link {
+    color: #212529;
+    transition: color 0.3s ease; /* Animación suave al cambiar el color */
 }
+
+/* Cambiar a color rojo cuando el usuario pasa el cursor */
+.nav-link:hover {
+    color: red;
+}
+
+
+/* Cambiar color de los h2 al pasar el cursor */
+h2:hover {
+    color: red; /* Cambia el texto a rojo */
+    transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+
+
+/* Justificar textos */
+body, p, h2, ul, li {
+    text-align: justify;
+}
+
+
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal en pantallas pequeñas */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-
-
-/* Estilos para la alerta */
-#alert {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffffe0;
-    padding: 20px;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #eb1111e2;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 1000;
-    width: 80%; /* Ajustable para buena visibilidad en móviles */
-    max-width: 400px;
+h2 {
+    color: #060707;
 }
 
-/* Estilo para el h2 */
-#alertText {
-    font-size: 24px;
-    color: #ff3333; /* Rojo visible */
+.container {
+    max-width: 850px;
+    margin: auto;
 }
 
-/* Estilo inicial para el párrafo */
-#alertParagraph {
-    font-size: 18px;
-    color: #e1e7ec88; /* Verde ovni */
-    transition: color 0.3s ease; /* Suave transición al pasar el cursor */
+/* Estilo para los enlaces */
+a {
+    text-decoration: none;
+    color: #0066cc;
 }
 
-/* Cambia el color del párrafo a blanco cuando se pasa el cursor */
-#alertParagraph:hover {
-    color: #14a123;
+a:hover {
+    color: #db1212;
 }
 
-/* Estilos del botón */
+/* Botón de Traducir */
 button {
-    -webkit-appearance: none;
-    background-color:#ff3333;
-    color: #000;
-    border: none;
+    background-color: #007bff;
+    color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #00cc88; /* Efecto hover en el botón */
+    background-color: #0056b3;
 }
 
-/* Hacer la alerta visible y amigable en dispositivos móviles */
-@media (max-width: 600px) {
-    #alert {
-        width: 90%;
-        font-size: 16px;
-    }
+.contact-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
 
-    #alertText {
-        font-size: 20px;
-    }
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
 
-    #alertParagraph {
-        font-size: 16px;
-    }
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+    background-color: #ff0000;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contact-icon {
+    width: 28px;
+    height: 28px;
 }
 
 
+/* Estilos generales */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
 
+/* Botones personalizados */
+.custom-button {
+    background-color: #007bff; /* Azul inicial */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px; /* Espaciado entre botones */
+    font-weight: bold;
+}
+
+/* Animación de cambio de colores */
+@keyframes colorChange {
+    0% {
+        background-color: #007bff; /* Azul */
+    }
+    33% {
+        background-color: #6c757d; /* Gris */
+    }
+    66% {
+        background-color: #fd7e14; /* Naranja */
+    }
+    100% {
+        background-color: #007bff; /* Azul */
+    }
+}
+
+.custom-button {
+    animation: colorChange 9s infinite; /* Cambia de color cada 3 segundos */
+}
+
+
+/* Botón de cambio de idioma */
+#translate-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover en el botón */
+#translate-button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor del traductor */
+#google_translate_element {
+    margin-top: 10px;
+    display: none; /* Inicialmente oculto */
+    text-align: center;
+}
+
+/* Selector de idiomas */
+.goog-te-combo {
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Estilo para el formulario de contacto */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos y botones */
+.contact-form h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Espaciado y borde de los campos */
+.contact-form .form-control {
+    border-radius: 5px;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+}

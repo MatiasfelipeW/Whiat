@@ -1,210 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Bienvenidos a mi repositorio, esta es mi web personal con mis trabajos y proyectos personales. Si quieres hacerme comentarios o quieres contactarme para algun proyecto juntos o solo practicar, estare encantado de que me escribas y mas si estas revisando mi html  :*-->
-<!--Los datos suministrados en estos websites son totalmente reales y verificables a traves de los sitios web de organismos colombianos -->
+<html lang="es">
 <head>
-    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="matiasfelipew">
-    <meta name="content" content="Garantias Financieras y juridicas s.a.s">
-    <meta name="keywords" content="Financiero, juridico">
-    
-
-    <title>WHIAT COMPANY</title>
-
-    <!-- CSS -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matías Felipe Whiat - Mi Página Profesional</title>
+    <!-- Vinculamos Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vinculamos nuestro CSS personalizado -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
-
-<!-- Parte para el traductor-->
-    <div id="translator_container">
-        <a href="https://wa.me/573042286435" target="_blank">
-            <img src="sun-removebg-preview.png" alt="Logo Traductor" id="translator_logo">
-        </a>
-        <div id="google_translate_element"></div>
-    </div>
-    
-    
-    <script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en', 
-            includedLanguages: 'es,en,de,zh-CN,ru,esp,sp'
-        }, 'google_translate_element');
-    }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
-    <!--Parte para el navegador principal-->
 <body>
-    <div id="preloader">
-        <video id="preloaderVideo" autoplay muted playsinline>
-            <source src="ssistem.mp4" type="video/mp4">
-            Tu navegador no soporta videos.
-        </video>
-    </div>
-    
+    <div id="preloader"></div>
 
+
+    <!-- Header (Barra de Navegación) -->
     <header>
-            <!-- Navegador vertical -->
-    <nav>
-                <ul class="primernavegador">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                </ul>
-            </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Matías Felipe Whiat</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#about">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#whiat">Whiat Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#garantias">Garantías Financieras y Jurídicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos en Proceso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-
-    <!--agregare Temporalmente los botones, debo revisar los cambios-->
+    <!-- Main Content -->
     <main>
-
-        <section class="digitalin"></section>
-            <h1>
-                <p class="protest-guerrilla-regular">
-                    <strong>Digital Innovation and Automation."</strong>: Specialists in video game development, automated systems, and solutions based on cryptocurrencies and NFTs. We transform your ideas into disruptive digital products.
-                </p>
-            </h1>
-        </section>
-
-        
-        <!-- Segunda imagen del planeta tierra giratoria con contenido -->
-        <section id="services" class="services-section">
-            <h2 class="protest-guerrilla-regular">Digital company</h2>
-            <div class="hidden-text-container">
-        <!-- Imagen de la Tierra con animación de rotación -->
-                <div class="earth-container">
-                    <img src="eatr-removebg-preview.png" alt="Imagen de fondo" class="earth">
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="MATIAS.jpg" class="img-fluid rounded-circle" alt="Matías Felipe Whiat">
                 </div>
-                <p class="P1 hidden-text">
- We focus on collaboration and efficiency to deliver exceptional results without the limitations of a traditional office. In our company, we have various tasks besides programming. We offer the purchase and sale of veterinary supplies, virtual consulting for trips and/or tour packages, and many other virtual agreements and outsourcing services.
-        </div>
-        </section>
-
-
-        <!-- Imagen UFO con contenido -->
-        <section id="about" class="about-section">
-            <h2 class="protest-guerrilla-regular">Digital Nomads</h2>
-            <div class="hidden-text-container">
-                <div class="astronaut-container">
-                    <img src="fontufo.png" alt="Imagen del astronauta" class="astronaut">
-                    <div class="fire"></div> <!-- Efecto de fuego debajo del astronauta -->
+                <div class="col-md-6">
+                    <h2>¡Hola! Soy Matías Felipe Whiat</h2>
+                    <p>Soy un profesional apasionado por el derecho, la programación y la traducción. Actualmente vivo en Córdoba, Argentina. Además, soy propietario de <strong>Whiat Company</strong>, una empresa dedicada al desarrollo de IA y soluciones de sistemas de automatización, y representante legal de <strong>Garantías Financieras y Jurídicas S.A.S.</strong>.</p>
+                    <p>Mi trayectoria se ha enfocado en ofrecer soluciones innovadoras a empresas, manteniendo siempre el profesionalismo y la ética que me caracteriza. En Whiat Company ayudamos a empresas de todo el mundo con desarrollo web personalizado y bases de datos escalables.</p>
                 </div>
-        <!-- Texto oculto de las imagenes -->
-                <p class="P1 hidden-text">
-                    Whiat Company is a cutting-edge company in the field of remote work, operating entirely online with a team of digital nomads. Its mission is to offer personalized and flexible solutions using the latest technologies and agile methodologies. The company breaks geographical barriers to connect global talents, combining experience and creativity to deliver high-quality services without the constraints of a traditional office. At Whiat Company, collaboration and efficiency are key, positioning it as a leader in transforming the future of work.
-                </p>
             </div>
         </section>
-        
-        <!-- Tercera imagen que contiene al planeta marte  -->
-        <section id="services" class="services-section">
-            <h2 class="protest-guerrilla-regular">Global Web Development & Database Solutions </h2>
-            <div class="hidden-text-container">
-        <!-- Imagen de Marte con animación de rotación -->
-                <div class="earth-container">
-                    <img src="MARS-removebg-preview.png" alt="Imagen de fondo" class="earth">
-                </div>
-                <p class="P1 hidden-text">
-                    Empowering businesses worldwide with custom web development and database solutions. Our team specializes in creating responsive websites tailored to your unique needs, whether you're local or across the globe. From user-friendly interfaces to secure, scalable databases, we build digital foundations that help your business thrive anywhere.
-        </div>
-        </section>
-        
-        <!--Parte para la alerta -->
 
-        <div id="alert">
-            <h2 id="alertText">¡Attention, Explorer! Click on the images!</h2>
-            <p id="alertParagraph">"Click on the UFOs and planets to discover more information about them."
-                </p>
-            <button id="closeAlert">Understood </button>
-        </div>
-        
-        <script src="scripts.js"></script>
-        
-        
-    
-        
-    </main>
-    
-
-
-    
-<!---Footer parte para el pie de pagina-->
-    <footer class="protest-guerrilla-regular">
-
-        <section>
-            <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/WEN-NAILS-ART/';">
-                WEBSITE WEN.NAIL_ART.
-            </button>
-        </section>
-        
-        <section>
-            <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/GFYJ-s.a.s/';">
-                WEBSITE GFYJ S.A.S
-            </button>
+        <!-- Sección Whiat Company -->
+        <section id="whiat" class="container py-5 bg-light">
+            <h2>Whiat Company</h2>
+            <p>Whiat Company es una empresa con registro mercantil 239746 de Manizales, Caldas, Colombia. Nos especializamos en crear sitios web personalizados y soluciones de bases de datos para empresas de todo el mundo. Nuestro equipo trabaja en crear plataformas digitales adaptadas a tus necesidades específicas, ya sea a nivel local o internacional.</p>
+            <p>Con interfaces fáciles de usar y bases de datos seguras y escalables, ayudamos a que tu negocio prospere sin importar dónde estés.</p>
         </section>
 
+        <!-- Sección Garantías Financieras y Jurídicas -->
+        <section id="garantias" class="container py-5">
+            <h2>Garantías Financieras y Jurídicas S.A.S </h2>
+            <p>En Garantías Financieras y Jurídicas S.A.S. NIT 901077248 de Medellin Colombia, funada en 2016, nos especializamos en el cobro de cartera jurídica y la gestión de demandas familiares o civiles. Con un equipo de abogados altamente capacitados, trabajamos para recuperar deudas pendientes y proteger los derechos de nuestros clientes en casos legales complejos.</p>
+            <p><strong>Cobro de Cartera Jurídica:</strong> Nuestro equipo maneja casos complejos de cobro de deuda, asegurando una recuperación eficiente y dentro del marco legal.</p>
+            <p><strong>Demandas Familiares y Civiles:</strong> Ofrecemos asesoramiento y representación legal en demandas de divorcio, custodia de menores, herencias, incumplimiento de contratos, entre otros.</p>
+        </section>
+
+        <!-- Sección Proyectos en Proceso -->
+        <section id="proyectos" class="container py-5 bg-light">
+            <h2>Proyectos en Proceso</h2>
+            <p>Actualmente estoy trabajando en varios proyectos que incluyen el desarrollo de nuevas plataformas web, soluciones de automatización para empresas y más. Estoy constantemente buscando oportunidades para seguir innovando y aportando al crecimiento del ecosistema digital.</p>
         
-
-        <section>
-            <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/Whiat/'">
-                WEBSITE LAWYERS OJT,IN PROCESS...
-            </button>
-        </section>
-
-        <section>
-            <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/AGENDAMIENTO/'">
-                WEBSITE TRAVEL AGENCY, IN PROCESS...
-            </button>
-        </section>
-
-
-
-        <section>
-            <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/WHIAT-COMPANY-PETS/';">
-                WEBSITE PETS WHIAT, IN PROCESS...
-            </button>
-        </section>
-
+            <section>
+                <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/WEN-NAILS-ART/';">
+                    WEBSITE WEN.NAIL_ART.
+                </button>
+            </section>
+            
+            <section>
+                <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/GFYJ-s.a.s/';">
+                    WEBSITE GFYJ S.A.S
+                </button>
+            </section>
     
             
-
-        <footer>
-            <section id="home">
-                <h1>MATIAS FELIPE WHIAT</h1>
-                <img src="MATIAS.jpg" alt="Photo of Matías Felipe Whiat" class="profile-photo">
-                <p>Legal Representative of Garantías Financieras y Jurídicas S.A.S. and Whiat Company</p>
-                <p>Connect with me on <a href="https://www.linkedin.com/in/matias-felipe-whiat-56b342240/" target="_blank">LinkedIn</a></p>
+    
+            <section>
+                <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/Whiat/'">
+                    WEBSITE LAWYERS OJT,IN PROCESS...
+                </button>
             </section>
-        </footer>
-        
-        <!---Whatsapp-->
-
-        <section class="imagenfooter">
-            <a href="https://wa.me/+5493513052333" target="_blank">
-                <img src="NO FONT/extrawhiat.png" alt="GFYJ">
-            </a>
+    
+            <section>
+                <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/AGENDAMIENTO/'">
+                    WEBSITE TRAVEL AGENCY, IN PROCESS...
+                </button>
+            </section>
+    
+    
+    
+            <section>
+                <button class="custom-button" onclick="window.location.href='https://matiasfelipew.github.io/WHIAT-COMPANY-PETS/';">
+                    WEBSITE PETS, IN PROCESS...
+                </button>
+            </section>
         </section>
 
-        <!--Email-->
-        <p>Teleport to my email.:
-            <a href="mailto:matiaswhiat@mail.de">matiaswhiat@mail.de</a>
-        </p>
+        <!-- Sección Contacto -->
+        <section id="contact" class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-links">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/matiaswhiat/" target="_blank" class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- OnlyFans -->
+                <a href="https://onlyfans.com/matiaswhiat" target="_blank" class="contact-item">
+                    <img src="OF-removebg-preview.png" alt="OnlyFans" class="contact-icon">
+                </a>
+                <!-- Telegram -->
+                <a href="https://t.me/Matiaswhiatbot" target="_blank" class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <!-- Correo Electrónico -->
+                <a href="mailto:matiaswhiat@mail.de" target="_blank" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5493513052333" target="_blank" class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/matiaswhiat/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+    </main>
 
-        <a href="https://www.serviciosvirtuales.com.co/es/camara/manizales/certificados/" target="_blank">
-            <p>&copy; 2024 "WHIAT COMPANY, with Commercial Registry #239746, Manizales, Caldas, Colombia." All rights reserved.</p>
-        </a>
+<!-- Footer -->
+<footer class="bg-light py-4">
 
-            </footer>
-            <script src="java.js"></script>
+<!-- Formulario de contacto -->
+<form action="https://formspree.io/f/manwrnrq" method="POST" class="contact-form">
+    <!-- Nombre completo -->
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
 
+    <!-- Teléfono con indicativo de país -->
+    <div class="mb-3">
+        <label for="phone" class="form-label">Teléfono (con indicativo)</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+57" required>
+    </div>
+
+    <!-- Observaciones -->
+    <div class="mb-3">
+        <label for="message" class="form-label">Observaciones</label>
+        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+    </div>
+
+    <!-- Botón de envío -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+    <div class="container text-center">
+        <p>&copy; 2024 Matías Felipe Whiat. Todos los derechos reservados.</p>
+        
+        <!-- Botón para cambiar idioma -->
+        <div id="google_translate_element" class="mt-3"></div>
+        <button id="translate-button" onclick="toggleTranslate()" class="btn btn-secondary">Cambiar Idioma</button>
+    </div>
+</footer>
+
+
+<!-- Script de Google Translate -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es', // Español como idioma predeterminado
+            includedLanguages: 'es,en,de,ru,zh-CN', // Idiomas permitidos
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false // No mostrar automáticamente
+        }, 'google_translate_element');
+    }
+
+    // Función para mostrar/ocultar el traductor al hacer clic en el botón
+    function toggleTranslate() {
+        var translateElement = document.getElementById('google_translate_element');
+        if (translateElement.style.display === 'block') {
+            translateElement.style.display = 'none';
+        } else {
+            translateElement.style.display = 'block';
+        }
+    }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="java.js"></script>
 </body>
 
+</body>
 </html>
+
