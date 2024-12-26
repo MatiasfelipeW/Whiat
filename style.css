@@ -1,17 +1,73 @@
 /* Estilo general */
 
-/* Asegúrate de enlazar este CSS o incluirlo en un <style> */
-body, html {
-    height: 100%;
-    margin: 0;
+/* Imagen de fondo para la barra de navegación */
+    bg-light py-4"{
+    background-image: url('How-Candy-Canes-Became-Synonymous-With-Christmas-Time_2234541071.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
+
+/* Imagen de fondo para el footer */
+.footer {
+    background-image: url('How-Candy-Canes-Became-Synonymous-With-Christmas-Time_2234541071.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* La imagen cubre todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Ajusta el color del texto para que sea visible */
+    padding: 20px;
+}
+
+/* Ajustar colores de enlaces para que contrasten con el fondo */
+.custom-navbar a, .custom-footer a {
+    color: white; /* Cambia los enlaces a blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.custom-navbar a:hover, .custom-footer a:hover {
+    color: #ffcc00; /* Cambia el color al pasar el ratón */
+}
+
+
+/* Contenedor de nieve */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* No interferir con clics u otros eventos */
+    z-index: 1000; /* Colocar sobre el contenido principal */
+    overflow: hidden;
+}
+
+/* Estilo de los copos de nieve */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Inicia fuera de la pantalla */
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    animation: fall linear infinite; /* Animación continua */
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(-10px); /* Comienza fuera de la pantalla */
+    }
+    100% {
+        transform: translateY(100vh); /* Termina al final de la pantalla */
+    }
+}
+
+
 
 .centered-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5vh; /* Hace que la sección ocupe toda la altura de la ventana */
-    background-color: #fffbfb; /* Color de fondo opcional */
 }
 
 .custom-button {
@@ -66,7 +122,7 @@ body.loaded #preloader {
 
 /* Estilo general de la barra de navegación */
 .navbar {
-    background-color: #f8f9fa;
+    background-color: #e1151503;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -125,7 +181,6 @@ a:hover {
 /* Botón de Traducir */
 button {
     background-color: #007bff;
-    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -138,8 +193,7 @@ button:hover {
 .contact-section {
     text-align: center;
     padding: 2rem;
-    background-color: #f9f9f9;
-}
+    }
 
 .contact-section h2 {
     font-size: 2rem;
@@ -157,7 +211,7 @@ button:hover {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-color: #fff;
+
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -228,7 +282,6 @@ button:hover {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 14px;
-    color: white;
     background-color: #007bff;
     border: none;
     border-radius: 5px;
@@ -254,14 +307,13 @@ button:hover {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #fff;
 }
 
 /* Estilo para el formulario de contacto */
 .contact-form {
     max-width: 500px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
