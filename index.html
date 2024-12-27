@@ -72,7 +72,7 @@
         </section>
 
         <!-- Sección Whiat Company -->
-        <section id="whiat" class="container py-5 bg-light">
+        <section id="whiat" class="whiat container">
             <h2>Whiat Company</h2>
             <p>Whiat Company es una empresa con registro mercantil 239746 de Manizales, Caldas, Colombia. Nos especializamos en crear sitios web personalizados y soluciones de bases de datos para empresas de todo el mundo. Nuestro equipo trabaja en crear plataformas digitales adaptadas a tus necesidades específicas, ya sea a nivel local o internacional.</p>
             <p>Con interfaces fáciles de usar y bases de datos seguras y escalables, ayudamos a que tu negocio prospere sin importar dónde estés.</p>
@@ -122,7 +122,7 @@
         </style>
 
         <!-- Sección Proyectos en Proceso -->
-        <section id="proyectos" class="container py-5 bg-light">
+        <section id="proyectos" class="container proyectos">
             <h2>Proyectos en Proceso</h2>
             <p>Actualmente estoy trabajando en varios proyectos que incluyen el desarrollo de nuevas plataformas web, soluciones de automatización para empresas y más. Estoy constantemente buscando oportunidades para seguir innovando y aportando al crecimiento del ecosistema digital.</p>
         
@@ -186,7 +186,7 @@
     </main>
 
 <!-- Footer -->
-<footer class="bg-light py-4">
+<footer class=" footerr">
 
 <!-- Formulario de contacto -->
 <form action="https://formspree.io/f/manwrnrq" method="POST" class="contact-form">
@@ -282,6 +282,34 @@
 
 
 
+<!-- Botón fijo de WhatsApp -->
+<a href="https://wa.me/5493513052333" target="_blank" class="btn btn-success btn-floating whatsapp-fixed">
+    <i class="bi bi-whatsapp" style="font-size: 24px;"></i>
+</a>
+
+<!-- Estilos CSS -->
+<style>
+    .whatsapp-fixed {
+        position: fixed;
+        bottom: 20px; /* Ajusta la posición vertical */
+        right: 20px; /* Ajusta la posición horizontal */
+        z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+        background-color: #25d366; /* Color de WhatsApp */
+        color: white;
+        border-radius: 50%; /* Hace el botón circular */
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-fixed:hover {
+        transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+<!-- Incluye Bootstrap Icons si no están ya en tu HTML -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 
 </body>

@@ -1,31 +1,15 @@
 /* Estilo general */
-
-/* Imagen de fondo para la barra de navegación */
-    bg-light py-4"{
-    background-image: url('How-Candy-Canes-Became-Synonymous-With-Christmas-Time_2234541071.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* La imagen cubre todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
-
-/* Imagen de fondo para el footer */
-.footer {
-    background-image: url('How-Candy-Canes-Became-Synonymous-With-Christmas-Time_2234541071.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* La imagen cubre todo el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: white; /* Ajusta el color del texto para que sea visible */
-    padding: 20px;
-}
-
-/* Ajustar colores de enlaces para que contrasten con el fondo */
-.custom-navbar a, .custom-footer a {
-    color: white; /* Cambia los enlaces a blanco */
-    text-decoration: none; /* Sin subrayado */
-}
-
-.custom-navbar a:hover, .custom-footer a:hover {
-    color: #ffcc00; /* Cambia el color al pasar el ratón */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('pexels-thisbrandstudio-290220.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    background-color: transparent !important; /* Sobrescribe el fondo predeterminado */
 }
 
 
