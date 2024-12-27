@@ -1,4 +1,39 @@
 /* Estilo general */
+
+/* Estilos específicos para iPhone 15 Pro y modelos posteriores */
+@media only screen and (min-width: 800px) {
+    /* Aquí puedes ajustar los estilos para que no afecten a dispositivos grandes */
+    
+    body {
+        /* No modificar el fondo o elementos que afectan el diseño en iPhone 15 Pro */
+        background-image: none; /* Ejemplo para quitar la imagen de fondo */
+    }
+
+    .navbar {
+        /* Asegúrate de que la barra de navegación sea compatible */
+        padding: 12px 20px;
+    }
+
+    .custom-button {
+        font-size: 18px; /* Ajusta el tamaño de fuente para botones */
+        padding: 12px 24px;
+    }
+
+    .contact-form {
+        width: 60%; /* Evita que el formulario sea demasiado ancho */
+    }
+
+    /* Otros estilos específicos para pantallas grandes pueden ir aquí */
+}
+
+/* Si deseas que en dispositivos muy grandes no se apliquen ciertos estilos */
+@media screen and (min-width: 1024px) {
+    /* Se pueden añadir más ajustes según el dispositivo */
+    .container {
+        width: 80%; /* Mantener el contenido a un tamaño adecuado */
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
