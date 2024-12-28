@@ -28,6 +28,11 @@
     }
   }
   
+  body {
+    color: #f9f9f9f9; /* Cambia esto a un tono más oscuro como #000000 para negro puro */
+    font-weight: 800; /* Cambia a 500 o 600 para un texto más grueso */
+
+}
 
 body {
     margin: 0;
