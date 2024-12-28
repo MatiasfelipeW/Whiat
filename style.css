@@ -1,10 +1,39 @@
 /* Estilo general */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con clics */
+    z-index: 9999; /* Por encima del contenido */
+    overflow: hidden;
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    opacity: 0.8;
+    font-size: 1rem;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+  
 
 body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-image: url('fondo-confeti_1048-7865.jpg');
+    background-image: url('pexels-scottwebb-2117937.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

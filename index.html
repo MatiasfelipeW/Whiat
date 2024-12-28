@@ -14,6 +14,8 @@
 
 </head>
 <body>
+    <div id="snow-container"></div> 
+
     <div id="preloader"></div>
 
     
@@ -312,7 +314,46 @@
 <!-- Incluye Bootstrap Icons si no están ya en tu HTML -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const snowContainer = document.getElementById("snow-container");
+      const snowflakes = 50; // Número de copos de nieve
+  
+      for (let i = 0; i < snowflakes; i++) {
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.textContent = "❄"; // Puedes usar otros símbolos o imágenes
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.opacity = Math.random();
+        snowContainer.appendChild(snowflake);
+  
+        // Elimina el copo después de caer
+        snowflake.addEventListener("animationend", () => {
+          snowflake.remove();
+        });
+      }
+  
+      // Generar nuevos copos de manera periódica
+      setInterval(() => {
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.textContent = "❄";
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+        snowflake.style.opacity = Math.random();
+        snowContainer.appendChild(snowflake);
+  
+        // Elimina el copo después de caer
+        snowflake.addEventListener("animationend", () => {
+          snowflake.remove();
+        });
+      }, 200);
+    });
+  </script>
+  
 </body>
 
 </html>
