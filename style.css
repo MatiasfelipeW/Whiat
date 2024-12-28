@@ -1,34 +1,38 @@
 /* Estilo general */
-.snowflake {
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con clics */
+    z-index: 9999; /* Por encima del contenido */
+    overflow: hidden;
+  }
+  
+  .snowflake {
     position: absolute;
     top: -10px;
     color: white;
     opacity: 0.8;
     font-size: 1rem;
-    animation: fall 5s linear infinite; /* Duración ajustada a 25s */
-}
-
-@keyframes fall {
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
     0% {
-        transform: translateY(-10px) rotate(0deg);
+      transform: translateY(-10px) rotate(0deg);
     }
     100% {
-        transform: translateY(100vh) rotate(360deg);
+      transform: translateY(100vh) rotate(360deg);
     }
+  }
+  
+  body {
+    color: #fdfbfb; /* Cambia esto a un tono más oscuro como #000000 para negro puro */
+    font-weight: 800; /* Cambia a 500 o 600 para un texto más grueso */
+
 }
-
-
-
-body {
-    color: #f9f9f9; /* Color original del texto */
-    font-weight: 800; /* Grosor del texto */
-    transition: color 0.3s ease; /* Suaviza la transición de color */
-}
-
-body:hover {
-    color: red; /* Cambia el color al pasar el cursor */
-}
-
 
 body {
     margin: 0;
