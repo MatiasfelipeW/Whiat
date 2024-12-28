@@ -1,82 +1,28 @@
 /* Estilo general */
 
-/* Estilos específicos para iPhone 15 Pro y modelos posteriores */
-@media only screen and (min-width: 800px) {
-    /* Aquí puedes ajustar los estilos para que no afecten a dispositivos grandes */
-    
-    body {
-        /* No modificar el fondo o elementos que afectan el diseño en iPhone 15 Pro */
-        background-image: none; /* Ejemplo para quitar la imagen de fondo */
-    }
-
-    .navbar {
-        /* Asegúrate de que la barra de navegación sea compatible */
-        padding: 12px 20px;
-    }
-
-    .custom-button {
-        font-size: 18px; /* Ajusta el tamaño de fuente para botones */
-        padding: 12px 24px;
-    }
-
-    .contact-form {
-        width: 60%; /* Evita que el formulario sea demasiado ancho */
-    }
-
-    /* Otros estilos específicos para pantallas grandes pueden ir aquí */
-}
-
-/* Si deseas que en dispositivos muy grandes no se apliquen ciertos estilos */
-@media screen and (min-width: 1024px) {
-    /* Se pueden añadir más ajustes según el dispositivo */
-    .container {
-        width: 80%; /* Mantener el contenido a un tamaño adecuado */
-    }
-}
-
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-image: url('chfooter.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    min-height: 100vh; /* Asegura que siempre ocupe toda la altura de la pantalla */
+    background-image: url('tree.jpg');
+    background-size: cover; /* La imagen cubrirá toda el área del fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
     font-family: 'Arial', sans-serif;
-    background-color: transparent !important; /* Sobrescribe el fondo predeterminado */
+    background-attachment: fixed; /* Hace que el fondo permanezca fijo al hacer scroll */
 }
 
-
-/* Contenedor de nieve */
-.snow-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* No interferir con clics u otros eventos */
-    z-index: 1000; /* Colocar sobre el contenido principal */
-    overflow: hidden;
-}
-
-/* Estilo de los copos de nieve */
-.snowflake {
-    position: absolute;
-    top: -10px; /* Inicia fuera de la pantalla */
-    color: white;
-    font-size: 1.5rem;
-    opacity: 0.8;
-    animation: fall linear infinite; /* Animación continua */
-}
-
-/* Animación de caída */
-@keyframes fall {
-    0% {
-        transform: translateY(-10px); /* Comienza fuera de la pantalla */
+/* Ajustes específicos para pantallas pequeñas como iPhones */
+@media only screen and (max-width: 768px) {
+    body {
+        background-size: auto 100%; /* Ajusta la imagen para que se adapte a la altura */
     }
-    100% {
-        transform: translateY(100vh); /* Termina al final de la pantalla */
+}
+
+/* Ajustes específicos para pantallas grandes como laptops */
+@media only screen and (min-width: 1024px) {
+    body {
+        background-size: cover; /* Mantiene la cobertura completa */
     }
 }
 
