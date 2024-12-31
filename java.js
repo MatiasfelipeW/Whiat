@@ -14,3 +14,6 @@ window.addEventListener('load', function () {
 });
 
 
+window.onload = function () {
+    changeButtonText();
+};

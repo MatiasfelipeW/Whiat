@@ -282,6 +282,30 @@ button:hover {
 
 
 /* Botón de cambio de idioma */
+/* Botón fijo a la derecha */
+.translate-fixed {
+    position: fixed;
+    bottom: 150px; /* Separación desde la parte inferior */
+    right: 20px;  /* Separación desde la parte derecha */
+    z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #6c757d; /* Color del botón */
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Animación */
+}
+
+/* Efecto al pasar el cursor */
+.translate-fixed:hover {
+    transform: scale(1.1); /* Ampliar ligeramente */
+    background-color: #5a6268; /* Cambiar el color del fondo */
+}
+ 
+
 #translate-button {
     margin-top: 10px;
     padding: 10px 20px;
