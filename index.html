@@ -261,23 +261,21 @@
     Cambiar Lenguaje
 </button>
 
-<div id="google_translate_element" class="mt-3"></div>
-<button id="translate-button" onclick="toggleTranslate()" class="btn btn-secondary">Cambiar Lenguaje</button>
-
 <!-- Script de Google Translate -->
 <script type="text/javascript">
+    // Inicializa Google Translate
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
-            pageLanguage: 'es', // Español como idioma predeterminado
-            includedLanguages: 'es,en,de,ru,zh-CN', // Idiomas permitidos
+            pageLanguage: 'es',
+            includedLanguages: 'es,en,de,ru,zh-CN', // Idiomas disponibles
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false // No mostrar automáticamente
+            autoDisplay: false
         }, 'google_translate_element');
     }
 
-    // Función para mostrar/ocultar el traductor al hacer clic en el botón
+    // Función para mostrar/ocultar el traductor
     function toggleTranslate() {
-        var translateElement = document.getElementById('google_translate_element');
+        const translateElement = document.getElementById('google_translate_element');
         if (translateElement.style.display === 'block') {
             translateElement.style.display = 'none';
         } else {
@@ -285,7 +283,7 @@
         }
     }
 
-    // Función para cambiar el texto del botón cada 2 segundos
+    // Cambia el texto del botón cada 2 segundos
     function changeButtonText() {
         const button = document.getElementById('translate-button');
         const texts = [
@@ -295,18 +293,19 @@
             'Изменить язык',     // Ruso
             '更改语言'            // Chino Simplificado
         ];
-        
-        let currentIndex = 0; // Índice del texto actual
 
-        setInterval(function() {
+        let currentIndex = 0;
+
+        setInterval(function () {
             button.innerText = texts[currentIndex];
-            currentIndex = (currentIndex + 1) % texts.length; // Ciclo a través de los textos
-        }, 2000); // Cambiar cada 2 segundos
+            currentIndex = (currentIndex + 1) % texts.length;
+        }, 2000);
     }
 
-    // Llamar a la función para cambiar el texto del botón cuando la página cargue
+    // Ejecutar cambio de texto al cargar
     window.onload = changeButtonText;
 </script>
+
 
 </footer> 
 

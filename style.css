@@ -33,6 +33,37 @@
     font-weight: 800; /* Cambia a 500 o 600 para un texto más grueso */
 
 }
+/* Estilo para posicionar el traductor y el botón a la derecha */
+/* Estilo para el traductor */
+#google_translate_element {
+    position: fixed;
+    top: 60%; /* Centrado vertical */
+    right: 15px; /* Separación de la derecha */
+    z-index: 9999; /* Asegura que el traductor esté por encima de otros elementos */
+    display: none; /* Ocultar el traductor por defecto */
+}
+
+/* Estilo para el botón de traducción */
+#translate-button {
+    position: fixed;
+    top: 70%; /* Centrado vertical */
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
+    background-color: #ff0000; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border: none; /* Eliminar borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor en forma de mano */
+}
+
+/* Cambiar color del botón al pasar el cursor */
+#translate-button:hover {
+    background-color: #cc0000; /* Color de fondo más oscuro al pasar el cursor */
+}
+
 
 body {
     margin: 0;
@@ -276,66 +307,9 @@ button:hover {
     }
 }
 
-.custom-button {
-    animation: colorChange 9s infinite; /* Cambia de color cada 3 segundos */
-}
 
 
-/* Botón de cambio de idioma */
-/* Botón fijo a la derecha */
-.translate-fixed {
-    position: fixed;
-    bottom: 150px; /* Separación desde la parte inferior */
-    right: 20px;  /* Separación desde la parte derecha */
-    z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
-    padding: 10px 15px;
-    font-size: 14px;
-    border-radius: 5px;
-    background-color: #6c757d; /* Color del botón */
-    color: white;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease; /* Animación */
-}
 
-/* Efecto al pasar el cursor */
-.translate-fixed:hover {
-    transform: scale(1.1); /* Ampliar ligeramente */
-    background-color: #5a6268; /* Cambiar el color del fondo */
-}
- 
-
-#translate-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 14px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Efecto hover en el botón */
-#translate-button:hover {
-    background-color: #0056b3;
-}
-
-/* Contenedor del traductor */
-#google_translate_element {
-    margin-top: 10px;
-    display: none; /* Inicialmente oculto */
-    text-align: center;
-}
-
-/* Selector de idiomas */
-.goog-te-combo {
-    font-size: 14px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
 /* Estilo para el formulario de contacto */
 .contact-form {
