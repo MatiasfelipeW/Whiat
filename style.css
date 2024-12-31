@@ -1,4 +1,9 @@
 /* Estilo general */
+#contact-heading {
+    text-align: center; /* Centrar horizontalmente */
+}
+
+
 #snow-container {
     position: fixed;
     top: 0;
