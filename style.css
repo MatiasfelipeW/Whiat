@@ -1,4 +1,27 @@
 /* Estilo general */
+
+.new-year {
+    font-family: 'Cursive', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff6347, 0 0 10px #ffa07a, 0 0 20px #ffd700, 0 0 30px #ffa07a, 0 0 40px #ff6347;
+    background: linear-gradient(90deg, #ff6347, #ffa07a, #ffd700, #ffa07a, #ff6347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+/* Keyframe for glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff6347, 0 0 10px #ffa07a, 0 0 20px #ffd700, 0 0 30px #ffa07a, 0 0 40px #ff6347;
+    }
+    100% {
+        text-shadow: 0 0 10px #ffa07a, 0 0 20px #ffd700, 0 0 30px #ffa07a, 0 0 40px #ff6347, 0 0 50px #ff6347;
+    }
+}
+
+
 #contact-heading {
     text-align: center; /* Centrar horizontalmente */
 }
