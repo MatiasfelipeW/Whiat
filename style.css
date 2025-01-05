@@ -69,7 +69,7 @@
     right: 0;
     transform: translateY(-50%);
     z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
-    background-color: #ff0000; /* Color de fondo rojo */
+    background-color: #357935; /* Color de fondo rojo */
     color: white; /* Color del texto blanco */
     border: none; /* Eliminar borde */
     padding: 10px 20px; /* Espaciado interno */
@@ -128,7 +128,7 @@ body {
 .custom-button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007BFF; /* Color del botón */
+    background-color: #357935; /* Color del botón */
     color: white;
     border: none;
     border-radius: 5px;
@@ -226,7 +226,7 @@ h2 {
 /* Estilo para los enlaces */
 a {
     text-decoration: none;
-    color: #0066cc;
+    color: #357935;
 }
 
 a:hover {
@@ -277,7 +277,7 @@ button:hover {
 
 .contact-item:hover {
     transform: scale(1.1);
-    background-color: #6fdee6;
+    background-color: #357935;
 }
 
 .contact-item i {
@@ -299,7 +299,8 @@ button:hover {
 
 /* Botones personalizados */
 .custom-button {
-    background-color: #007bff; /* Azul inicial */
+    background-color: #357935
+    ; /* Azul inicial */
     color: white;
     border: none;
     padding: 15px 30px;
